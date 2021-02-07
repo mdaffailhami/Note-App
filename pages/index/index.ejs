@@ -21,17 +21,19 @@
           <% notes.forEach(element => { %>
           <tr>
             <td><%= element.title %></td>
-            <td id="content"><%= element.content %></td>
+            <td><%= element.content %></td>
             <td>
-              <button id="update" value="<%= element._id %>">Edit</button>
-              <button id="delete" value="<%= element._id %>">Hapus</button>
+              <a href="/update/<%= element._id %>"><button>Edit</button></a>
+              <a
+                onclick="return confirm('Yakin ingin menghapus <%= element.title %>')"
+                href="/delete/<%= element._id %>"
+                ><button>Hapus</button></a
+              >
             </td>
           </tr>
           <% }); %>
         </tbody>
       </table>
     </div>
-
-    <script src="/script.js"></script>
   </body>
 </html>
