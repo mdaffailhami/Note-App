@@ -21,8 +21,7 @@
           <% notes.forEach(element => { %>
           <tr>
             <td><%= element.title %></td>
-            <input type="hidden" id="contentValue" value="<%= element.content %>" />
-            <td id="content"></td>
+            <td id="content"><%= element.content %></td>
             <td>
               <button id="update" value="<%= element._id %>">Edit</button>
               <button id="delete" value="<%= element._id %>">Hapus</button>
