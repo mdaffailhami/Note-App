@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPDATE</title>
+  </head>
+  <body>
+    <div id="container">
+      <form action="" method="POST">
+        <table>
+          <tr>
+            <th><label for="title">Title</label></th>
+            <td><input type="text" name="title" id="title" value="<%= note.title %>" /></td>
+          </tr>
+          <tr>
+            <th><label for="content">Content</label></th>
+            <td>
+              <textarea name="content" id="content" cols="30" rows="10">
+<%= note.content %></textarea
+              >
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">SIMPAN</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
