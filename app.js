@@ -39,4 +39,5 @@ app.use(routers.register);
 app.use(routers.create);
 app.use(routers.update);
 
-app.listen(1234, console.log("Server is running on http://localhost:1234"));
+const PORT = process.env.PORT || 5000
+app.listen(PORT, console.log("Server is running on port ", PORT));
