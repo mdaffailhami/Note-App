@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note-App</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <a href="/logout"><button>Logout</button></a>
+      <h3>username: <%= user.username %></h3>
+      <button onclick="window.location.href = '/create'">Tambah Catatan</button>
+      <table border="1">
+        <thead>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          <% notes.forEach(element => { %>
+          <tr>
+            <td><%= element.title %></td>
+            <input type="hidden" id="contentValue" value="<%= element.content %>" />
+            <td id="content"></td>
+            <td>
+              <button id="update" value="<%= element._id %>">Edit</button>
+              <button id="delete" value="<%= element._id %>">Hapus</button>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
