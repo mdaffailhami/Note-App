@@ -1,0 +1,24 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "Aplikasi Web untuk nyatet gess",
+  "main": "app.js",
+  "scripts": {
+	"start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs",
+    "mongodb-atlas"
+  ],
+  "author": "Muhammad Daffa Ilhami",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.15"
+  }
+}
