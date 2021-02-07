@@ -1,11 +1,11 @@
 const elm = {
-  content: document.getElementById("content"),
-  contentValue: document.getElementById("contentValue"),
+  // content: document.getElementById("content"),
+  // contentValue: document.getElementById("contentValue"),
   delete: document.getElementById("delete"),
   update: document.getElementById("update"),
 };
 
-elm.content.innerText = elm.contentValue.value;
+// elm.content.innerText = elm.contentValue.value;
 
 elm.delete.addEventListener("click", () => {
   const yakin = confirm("Yakin ingin menghapus?");
