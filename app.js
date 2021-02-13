@@ -32,10 +32,6 @@ app.use(
   })
 );
 
-app.get('*',(req, res, next) => {
-  if (!req.secure) res.redirect(`https://${req.headers.host}${req.url}`);
-  else next();
-});
 // Routes
 app.use(routers.index);
 app.use(routers.login);
