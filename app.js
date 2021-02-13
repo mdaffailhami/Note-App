@@ -32,8 +32,8 @@ app.use(
   })
 );
 
-app.use((req, res, next) => {
-  if (!req.secure) res.redirect(`https://github.com/mdaffailhami`);
+app.get('*',(req, res, next) => {
+  if (!req.secure) res.redirect(`https://${req.headers.host}${req.url}`);
   else next();
 });
 // Routes
