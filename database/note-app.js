@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  `mongodb+srv://daffa-ilhami:7jfegpsRVmwtosk1@cluster0.wuxkd.mongodb.net/note-app?retryWrites=true&w=majority`,
+  process.env.MONGOOSE_CONNECTION_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (err) throw err;
